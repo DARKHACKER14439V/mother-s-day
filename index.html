@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Mother's Day, Maa ❤️</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Animated background layers -->
+  <div class="bg" aria-hidden="true">
+    <canvas id="particleCanvas"></canvas>
+    <div class="floating-layer" id="floatingLayer"></div>
+  </div>
+
+  <!-- Floating audio element (starts after user interaction) -->
+  <audio id="bgMusic" src="song.mp3" preload="auto" loop></audio>
+
+  <header class="hero" id="top">
+    <nav class="nav">
+      <div class="brand">Maa ❤️</div>
+      <button class="nav__btn" id="scrollToGallery" type="button" aria-label="Go to gallery">Gallery</button>
+    </nav>
+
+    <section class="hero__content">
+      <div class="hero__left">
+        <h1 class="hero__title">
+          Happy Mother's Day, Maa <span class="heart-inline" aria-hidden="true">❤️</span>
+        </h1>
+        <p class="hero__subtitle">You are the most precious gift in my life.</p>
+
+        <div class="typewriter" aria-live="polite">
+          <span class="typewriter__label">My feelings: </span>
+          <span class="typewriter__text" id="typewriterText"></span>
+          <span class="typewriter__cursor" aria-hidden="true">|</span>
+        </div>
+
+        <div class="hero__cta">
+          <button class="surprise-btn" id="surpriseBtn" type="button">
+            Click Here, Maa <span aria-hidden="true">❤️</span>
+          </button>
+          <p class="hint">(click.)</p>
+        </div>
+
+        <div class="letter" id="loveLetter" aria-hidden="true">
+          <div class="letter__inner">
+            <div class="letter__header">
+              <span class="letter__seal" aria-hidden="true">✦</span>
+              <h2 class="letter__title">A Love Letter for Maa</h2>
+            </div>
+
+            <div class="letter__body">
+              <p class="handwritten">
+                Dear Maa,<br /><br />
+                One day I will make you proud, Maa.<br />
+                I promise to keep growing, working hard, and loving you with everything I have.
+              </p>
+              <p class="letter__signature">— Your loving son</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__right">
+        <div class="photo-frame" role="img" aria-label="Mom photo" title="Replace mom.jpg with your photo">
+          <img src="mom.png" alt="Maa" class="photo" onerror="this.style.display='none'" />
+          <div class="photo-frame__glow" aria-hidden="true"></div>
+          <div class="photo-frame__ring" aria-hidden="true"></div>
+        </div>
+
+        <div class="awards">
+          <div class="trophy-card" aria-label="Best Mom in the World">
+            <div class="trophy-card__shine" aria-hidden="true"></div>
+            <div class="trophy" aria-hidden="true">🏆</div>
+            <div class="trophy-card__text">Best Mom in the World</div>
+          </div>
+        </div>
+
+        <div class="counter" id="timeCounter">
+          <div class="counter__label">Time Since You Became My Mother ❤️</div>
+          <div class="counter__grid" aria-label="Time counter">
+            <div class="metric"><span class="metric__num" id="years">0</span><span class="metric__unit">Years</span></div>
+            <div class="metric"><span class="metric__num" id="months">0</span><span class="metric__unit">Months</span></div>
+            <div class="metric"><span class="metric__num" id="days">0</span><span class="metric__unit">Days</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="section section--message" id="message">
+      <div class="container">
+        <h2 class="section__title">An emotional message for Maa</h2>
+        <div class="glass-card">
+          <pre class="message" aria-label="Heartfelt message">
+Dear Maa,
+Thank you for every sacrifice you made for me.
+You are my first teacher, my strongest support, and my biggest blessing.
+No matter how successful I become, I will always remain your little child.
+I love you more than words can express.
+Happy Mother's Day! ❤️
+          </pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--gallery" id="gallery">
+      <div class="container">
+        <h2 class="section__title">Memory Gallery</h2>
+        <p class="section__subtitle">Tap and hover to relive the beautiful moments.</p>
+        <div class="gallery" aria-label="Photo gallery">
+          <figure class="gallery__item"><img src="photo1.png" alt="Memory 1" onerror="this.style.opacity='0.25'" /><div class="gallery__cap">Sweet Moment</div></figure>
+          <figure class="gallery__item"><img src="photo2.png" alt="Memory 2" onerror="this.style.opacity='0.25'" /><div class="gallery__cap">Warm Smile</div></figure>
+          <figure class="gallery__item"><img src="photo3.png" alt="Memory 3" onerror="this.style.opacity='0.25'" /><div class="gallery__cap">Little Joy</div></figure>
+          <figure class="gallery__item"><img src="photo4.png" alt="Memory 4" onerror="this.style.opacity='0.25'" /><div class="gallery__cap">Forever Love</div></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--promise" id="promise">
+      <div class="container">
+        <h2 class="section__title">My Final Promise</h2>
+        <div class="glass-card glass-card--center">
+          <p class="promise">
+            Maa, every success in my life belongs to you.<br />
+            Your love is my greatest strength.<br />
+            I promise to work hard and make all your dreams come true.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__text">Made with <span aria-hidden="true">❤️</span> by Your Loving Son</div>
+      <div class="footer__small"></div>
+    </div>
+  </footer>
+
+  <!-- Confetti + heart burst overlays -->
+  <div class="burst" id="burstLayer" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
